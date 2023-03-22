@@ -18,16 +18,23 @@
     <body>
         <!--put your initial page content here-->
 		<div id="div1">
+			<p>2. The 'styleAll' function creates an object variable 'styles', which contain a list of stylistic parameters for a Leaflet map. There is then an if statement which runs if the feature passed to the function contains point data (in this case always true), which then further modifies some of the 'styles' tags. The 'styles' object is then returned to the parent environment.</p>
+			<p>4. 'feature' and 'layer' are both attributes of the data in the geojson dataset. 'layer' seems to be a container for 'feature', as it is contained within it, along with a number of other attributes which control when and how the data is displayed. In 'feature', we find 'geometry', which dictates what kind of spatial data this is (in this case, point), 'type', which in this case is always 'Feature', and 'properties', which contains an object containing any other attributes/metadata about the given datapoint (such as addresses and station types).</p>
+			<p>5. 'layer.options.fill' returns the information found within this stylistic parameter (in this case Boolean data), where as 'layer.getLatLng()' uses a pre-defined function to fetch information (in this case an object containing coordinates) found within the 'layer' attribute (without needing to specify its exact location).</p>
+			<p>6. These stylistic parameters removed the fill from the point data, and increased their size/radius.</p>
 		</div>
 		<div id="mapdiv">
-			
 		</div>
 		
         <!--you can also use this space for internal scripts; you would place these within <script> tags-->
 
-        
-		
+		<select class="li-nav" name="mapdropdown" id="mapdropdown">
+			<option value="map0" selected="selected" disabled>Load a map</option>
+			<option value='mapa'>Map A</option>
+			<option value='mapb'>Map B</option>
+		</select>
+
 		<!--put your external script links here-->
         <script type="text/javascript" src="js/main.js"></script>
-    </body>
+    </body>	
 </html>
